@@ -1,0 +1,56 @@
+Objetivo: Crear un diagrama de relaciones de una base de datos 
+que gestione el sistema de préstamos de una biblioteca. 
+Entidades Principales: 
+
+1. Libro: 
+o Atributos: ID_Libro, Título, Autor, ISBN, Año de 
+Publicación, Editorial, Categoría. 
+o Descripción: Representa cada libro disponible en la 
+biblioteca. 
+
+2. Usuario: 
+o Atributos: ID_Usuario, Nombre, Dirección, Teléfono, 
+Email, Tipo de Usuario (Estudiante, Profesor, etc.). 
+o Descripción: Representa a los usuarios que tienen 
+acceso a la biblioteca, como estudiantes y profesores. 
+
+3. Préstamo: 
+o Atributos: ID_Préstamo, Fecha_Préstamo, 
+Fecha_Devolución, Estado (Pendiente, Devuelto, 
+Retrasado). 
+o Descripción: Representa el registro de un préstamo 
+realizado por un usuario. 
+
+4. Categoría: 
+o Atributos: ID_Categoría, Nombre. 
+o Descripción: Representa las diferentes categorías en 
+las que se pueden clasificar los libros (e.g., 
+Ciencia, Literatura, Historia). 
+
+5. Autor: 
+o Atributos: ID_Autor, Nombre, Nacionalidad. 
+o Descripción: Representa a los autores de los libros. 
+
+Relaciones entre las Entidades: 
+1. Relación Libro - Préstamo: 
+o Descripción: Un libro puede estar en muchos préstamos, 
+pero un préstamo se refiere a un solo libro. 
+o Tipo de Relación: Uno a Muchos (1). 
+
+2. Relación Usuario - Préstamo: 
+o Descripción: Un usuario puede realizar varios 
+préstamos, pero un préstamo es realizado por un solo 
+usuario. 
+o Tipo de Relación: Uno a Muchos (1). 
+
+3. Relación Libro - Autor: 
+o Descripción: Un libro puede tener varios autores, y un 
+autor puede haber escrito varios libros. 
+o Tipo de Relación: Muchos a Muchos (M). 
+Necesita una tabla intermedia llamada Libro_Autor 
+que contenga los IDs de Libro y Autor. 
+
+4. Relación Libro - Categoría: 
+o Descripción: Un libro pertenece a una categoría, pero 
+una categoría puede tener varios libros. 
+o Tipo de Relación: Uno a Muchos (1).
