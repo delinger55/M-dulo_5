@@ -1,0 +1,34 @@
+Ejercicio: Sistema de Gestión de Inventario
+1. Descripción del problema:
+Una tienda desea implementar un sistema de gestión de inventario. El sistema debe permitir el seguimiento de productos, 
+categorías, proveedores y ventas. Se requiere un diagrama ER para modelar la base de datos y sentencias SQL para crear 
+las tablas en PostgreSQL.
+
+2. Requisitos:
+Productos:
+Cada producto tiene un código único, nombre, descripción, precio y cantidad en inventario.
+Un producto pertenece a una categoría.
+Un producto puede tener múltiples proveedores.
+
+Categorías:
+Cada categoría tiene un código único y un nombre.
+
+Proveedores:
+Cada proveedor tiene un ID único, nombre, dirección y teléfono.
+Un proveedor puede suministrar múltiples productos.
+
+Ventas:
+Cada venta tiene un ID único, fecha, y la lista de productos vendidos con su cantidad.
+
+3. Diagrama Entidad-Relación:
+Entidades principales:
+Producto
+Categoría
+Proveedor
+Venta
+Producto_Venta (tabla intermedia para la relación muchos a muchos entre Producto y Venta)
+
+Relaciones:
+Un producto pertenece a una categoría.
+Un proveedor puede suministrar múltiples productos.
+Un producto puede estar en múltiples ventas.
