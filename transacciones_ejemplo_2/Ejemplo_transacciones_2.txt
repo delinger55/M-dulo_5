@@ -1,0 +1,51 @@
+Ejercicio TRANSACIONE 2 
+Imagina que estás administrando un sistema de inventario para una tienda. 
+Tienes una tabla de productos que almacena la cantidad de cada producto en 
+inventario, y una tabla de pedidos para registrar los pedidos realizados. 
+Queremos implementar un proceso de pedido que: 
+
+1. Verifica la disponibilidad de productos. 
+2. Actualiza el inventario al reducir la cantidad de productos pedidos. 
+3. Registra el pedido en la tabla pedidos. 
+Si en cualquier punto del proceso ocurre un error (por ejemplo, si no hay 
+suficiente stock para un producto), queremos usar savepoints para revertir 
+parcialmente los cambios. 
+Tablas 
+
+1. Tabla productos: Almacena información sobre los productos y su cantidad 
+en inventario. 
+CREATE TABLE productos ( 
+producto_id SERIAL PRIMARY KEY, 
+nombre TEXT, 
+cantidad INT 
+); 
+
+Datos iniciales: 
+producto_id nombre cantidad 
+1 
+Producto X 100 
+2 
+Producto Y 50 
+
+2. Tabla pedidos: Registra los pedidos realizados. 
+CREATE TABLE pedidos ( 
+pedido_id SERIAL PRIMARY KEY, 
+producto_id INT, 
+cantidad INT, 
+fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+); 
+
+Ejercicio 
+Vamos a realizar un pedido de 20 unidades del "Producto X" y 10 unidades 
+del "Producto Y". Si no hay suficiente stock para alguno de los productos, 
+utilizaremos savepoints para manejar el error y revertir los cambios 
+correspondientes. 
+Pasos del Ejercicio 
+
+1. Iniciar una transacción. 
+2. Crear un savepoint antes de intentar realizar el pedido. 
+3. Verificar la disponibilidad de los productos. 
+4. Actualizar el inventario para reducir la cantidad de los productos pedidos. 
+5. Registrar el pedido en la tabla pedidos. 
+6. Si ocurre un error en cualquier paso, revertir a la savepoint. 
+7. Confirmar la transacción si todo sale bien.

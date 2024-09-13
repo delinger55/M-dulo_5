@@ -1,0 +1,12 @@
+Insertar 5 ejemplo en cada tabla 
+ 
+  Listar todos los estudiantes.  
+  Mostrar todos los pagos con información del estudiante.  
+  Calcular el total de pagos recibidos.  
+  Listar los cursos con su costo.  
+  Mostrar los pagos de un estudiante específico.  
+  Contar el número total de estudiantes.  
+  Encontrar el pago más alto.  
+  Listar los estudiantes que han realizado pagos.  
+  Mostrar los pagos ordenados por fecha.  
+  Calcular el promedio de pagos por curso.

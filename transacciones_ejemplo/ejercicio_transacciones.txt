@@ -1,0 +1,46 @@
+Ejercicio Transaciones 
+Supongamos que estamos implementando un sistema de transferencia de dinero 
+entre cuentas. Queremos realizar una transferencia de una cuenta a otra y 
+registrar la transacción. Sin embargo, si ocurre un error durante el 
+proceso, necesitamos usar savepoints para revertir parcialmente los 
+cambios. 
+
+Tablas 
+1. Tabla cuentas: Almacena información sobre las cuentas bancarias. 
+CREATE TABLE cuentas ( 
+cuenta_id SERIAL PRIMARY KEY, 
+nombre TEXT, 
+saldo DECIMAL 
+); 
+
+Datos iniciales: 
+cuenta_id nombre saldo 
+1 
+Ana 1000 
+2 
+Carlos 2000 
+
+2. Tabla transacciones: Registra las transferencias realizadas. 
+CREATE TABLE transacciones ( 
+transaccion_id SERIAL PRIMARY KEY, 
+desde_cuenta_id INT, 
+hacia_cuenta_id INT, 
+monto DECIMAL, 
+fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+); 
+
+Ejercicio 
+
+Vamos a realizar una transferencia de 300 unidades de la cuenta de Ana 
+(cuenta_id = 1) a la cuenta de Carlos (cuenta_id = 2). Además, vamos a 
+registrar esta transferencia en la tabla transacciones. 
+Pasos del Ejercicio 
+
+1. Iniciar una transacción. 
+2. Crear un savepoint antes de intentar realizar la transferencia. 
+3. Debitar 300 unidades de la cuenta de Ana. 
+4. Acreditar 300 unidades a la cuenta de Carlos. 
+5. Registrar la transacción en la tabla transacciones. 
+6. Si ocurre un error en la actualización del saldo o en el registro de 
+la transacción, revertir a la savepoint. 
+7. Confirmar la transacción si todo sale bien

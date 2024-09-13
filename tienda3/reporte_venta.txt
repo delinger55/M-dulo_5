@@ -1,0 +1,98 @@
+1. Reporte de Ventas por Cliente 
+Este reporte mostraría el total de ventas realizadas por cada 
+cliente. Incluye el número de ventas, los productos adquiridos y 
+el monto total gastado. 
+Resultado Esperado: 
+
+Cliente_ID Nombre_Cliente Num_Ventas Total_Ventas 
+1 
+Juan Pérez 
+2 
+2 
+Ana López 
+1 
+1100 
+200 
+
+2. Reporte de Compras por Cliente 
+Este reporte detallaría las compras realizadas por cada cliente, 
+el total de productos comprados y el monto total invertido en 
+las compras. 
+Resultado Esperado: 
+
+Cliente_ID Nombre_Cliente Num_Compras Total_Compras 
+1 
+Juan Pérez 
+2 
+500 
+2 
+Ana López 
+1 
+600 
+
+3. Reporte de Clientes con Ventas y Compras 
+Este reporte muestra una combinación de las ventas y compras por 
+cliente, indicando el monto total gastado en ambas categorías. 
+Resultado Esperado: 
+Cliente_ID Nombre_Cliente Total_Ventas Total_Compras Gasto_Total 
+1 
+Juan Pérez 
+1100 
+500 
+2 
+Ana López 
+200 
+1600 
+600 
+
+4. Reporte de Ventas por Producto 
+800 
+Este reporte muestra cuántas unidades de cada producto se 
+vendieron y el ingreso total generado por producto. 
+Resultado Esperado: 
+Producto_Venta Unidades_Vendidas Ingreso_Total 
+TV 
+Celular 
+Laptop 
+1 
+1 
+1 
+300 
+200 
+800 
+
+5. Reporte de Compras por Producto 
+Similar al reporte anterior, pero para compras, detallando 
+cuántas unidades de cada producto fueron compradas y el monto 
+total invertido en cada uno. 
+Resultado Esperado: 
+Producto_Compra Unidades_Compradas Gasto_Total 
+Lavadora 
+Refrigerador 
+Microondas 
+1 
+1 
+1 
+400 
+600 
+100 
+
+6. Reporte de Clientes que No Han Realizado Compras 
+Este reporte lista a los clientes que han realizado ventas pero 
+no compras, útil para identificar posibles oportunidades de 
+venta cruzada. 
+Resultado Esperado: Si hay clientes que no han realizado 
+compras, aparecerían en este reporte. 
+
+7. Reporte de Gasto Total por Cliente (Ventas y Compras 
+Combinadas) 
+Este reporte muestra el gasto total de cada cliente considerando 
+tanto ventas como compras. 
+Resultado Esperado: 
+Cliente_ID Nombre_Cliente Gasto_Total 
+1 
+2 
+Juan Pérez 
+Ana López 
+1600 
+800
